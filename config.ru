@@ -23,7 +23,7 @@ def generate_request(env)
 
   if callback_url.nil?
     @response[:status] = "error"
-    @response[:message] = "You did not specify a callback_url! in your url. Do so by doing something like this: 'GET http://callbackechoer.com?callback_url=example.com&verb=post'"
+    @response[:message] = "You did not specify a callback_url! in your url. Do so by doing something like this: 'GET http://callbackmemaybe.com?callback_url=yourwebsite.com&verb=post'"
     render_response.call
   
   elsif callback_url[0..3] != "http"
