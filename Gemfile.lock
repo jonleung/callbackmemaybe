@@ -1,22 +1,32 @@
 GEM
   remote: http://rubygems.org/
   specs:
+    archive-tar-minitar (0.5.2)
     columnize (0.3.6)
     daemons (1.1.9)
-    debugger (1.5.0)
-      columnize (>= 0.3.1)
-      debugger-linecache (~> 1.2.0)
-      debugger-ruby_core_source (~> 1.2.0)
-    debugger-linecache (1.2.0)
-    debugger-ruby_core_source (1.2.0)
     eventmachine (1.0.3)
     httparty (0.10.2)
       multi_json (~> 1.0)
       multi_xml (>= 0.5.2)
     json (1.7.7)
+    linecache19 (0.5.12)
+      ruby_core_source (>= 0.1.4)
     multi_json (1.7.2)
     multi_xml (0.5.3)
     rack (1.5.2)
+    rack-debug (2.0.0)
+      rack (>= 1.0)
+      ruby-debug19 (~> 0.11.6)
+    ruby-debug-base19 (0.11.25)
+      columnize (>= 0.3.1)
+      linecache19 (>= 0.5.11)
+      ruby_core_source (>= 0.1.4)
+    ruby-debug19 (0.11.6)
+      columnize (>= 0.3.1)
+      linecache19 (>= 0.5.11)
+      ruby-debug-base19 (>= 0.11.19)
+    ruby_core_source (0.1.5)
+      archive-tar-minitar (>= 0.5.2)
     thin (1.5.1)
       daemons (>= 1.0.9)
       eventmachine (>= 0.12.6)
@@ -26,8 +36,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  debugger
   httparty
   json
   rack
+  rack-debug
   thin
