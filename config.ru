@@ -2,8 +2,6 @@
 
 require 'json'
 require 'httparty'
-require 'debugger'
-
 
 def generate_request(env)
   render_response = Proc.new do
