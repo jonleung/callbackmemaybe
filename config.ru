@@ -25,9 +25,7 @@ def generate_request(env)
     render_response.call
   
   elsif callback_url[0..3] != "http"
-    @response[:status] = "error"
-    @response[:message] = "your callback url must begin with 'http' or 'https'"
-    render_response.call
+    callback_url = "http://" + callback_url
   
   else
     @response[:callback_url] = callback_url
